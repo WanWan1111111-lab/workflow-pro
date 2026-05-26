@@ -1,5 +1,5 @@
 import { Row, Col, Card, Avatar, Descriptions, List, Tag, Statistic, Empty } from 'antd';
-import { UserOutlined, EditOutlined } from '@ant-design/icons';
+import { UserOutlined } from '@ant-design/icons';
 import { useAuth, useWorkOrders } from '../../hooks';
 import { formatDate } from '../../utils/date';
 import { STATUS_COLORS, STATUS_TEXT } from '../../constants';

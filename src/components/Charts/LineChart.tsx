@@ -18,7 +18,7 @@ const LineChart = ({ data, height = 350 }: LineChartProps) => {
   useEffect(() => {
     if (!chartRef.current) return;
 
-    chartInstance.current = echarts.init(chartRef.current);
+    chartInstance.current = echarts.init(chartRef.current, undefined);
 
     const option: EChartsOption = {
       tooltip: {

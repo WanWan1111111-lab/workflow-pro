@@ -19,7 +19,7 @@ const BarChart = ({ data, height = 350 }: BarChartProps) => {
     if (!chartRef.current) return;
 
     // 初始化图表
-    chartInstance.current = echarts.init(chartRef.current);
+    chartInstance.current = echarts.init(chartRef.current, undefined);
 
     const option: EChartsOption = {
       tooltip: {

@@ -7,7 +7,6 @@ import {
   Tag,
   Input,
   Select,
-  DatePicker,
   Modal,
   message,
   Tooltip,
@@ -21,7 +20,7 @@ import {
   SearchOutlined,
   ReloadOutlined,
 } from '@ant-design/icons';
-import type { ColumnsType, TablePaginationConfig } from 'antd/es/table';
+import type { ColumnsType } from 'antd/es/table';
 import { useWorkOrders, useAuth } from '../../hooks';
 import { formatDate } from '../../utils/date';
 import { STATUS_COLORS, STATUS_TEXT, PRIORITY_COLORS, PRIORITY_TEXT } from '../../constants';
@@ -30,7 +29,6 @@ import WorkOrderDrawer from './WorkOrderDrawer';
 import type { WorkOrder } from '../../types';
 import './index.less';
 
-const { RangePicker } = DatePicker;
 const { Option } = Select;
 
 const WorkOrders = () => {
