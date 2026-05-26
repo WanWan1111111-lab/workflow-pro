@@ -17,7 +17,6 @@ const PieChart = ({ data, height = 350 }: PieChartProps) => {
   useEffect(() => {
     if (!chartRef.current) return;
 
-    // @ts-ignore - echarts.init 类型定义问题
     chartInstance.current = echarts.init(chartRef.current);
 
     // 过滤掉值为 0 的数据项

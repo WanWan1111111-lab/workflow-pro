@@ -17,7 +17,6 @@ const HeatmapChart = ({ data, height = 350 }: HeatmapChartProps) => {
   useEffect(() => {
     if (!chartRef.current) return;
 
-    // @ts-ignore - echarts.init 类型定义问题
     chartInstance.current = echarts.init(chartRef.current);
 
     // 计算最大值用于颜色映射
