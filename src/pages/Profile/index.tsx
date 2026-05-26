@@ -1,5 +1,5 @@
 import { Row, Col, Card, Avatar, Descriptions, List, Tag, Statistic, Empty } from 'antd';
-import { UserOutlined } from '@ant-design/icons';
+import { UserOutlined, EditOutlined } from '@ant-design/icons';
 import { useAuth, useWorkOrders } from '../../hooks';
 import { formatDate } from '../../utils/date';
 import { STATUS_COLORS, STATUS_TEXT } from '../../constants';
@@ -10,6 +10,10 @@ import './index.less';
 const Profile = () => {
   const { user } = useAuth();
   const { workOrders } = useWorkOrders();
+
+  console.log('Profile - 当前用户:', user);
+  console.log('Profile - 所有工单数:', workOrders.length);
+  console.log('Profile - 用户创建的工单:', workOrders.filter((order) => order.createdBy === user?.username));
 
   // 计算个人统计数据
   const userStats = useMemo(() => {
