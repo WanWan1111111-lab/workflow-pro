@@ -12,7 +12,7 @@ interface PieChartProps {
 
 const PieChart = ({ data, height = 350 }: PieChartProps) => {
   const chartRef = useRef<HTMLDivElement>(null);
-  const chartInstance = useRef<echarts.ECharts>();
+  const chartInstance = useRef<echarts.ECharts | undefined>(undefined);
 
   useEffect(() => {
     if (!chartRef.current) return;

@@ -13,7 +13,7 @@ interface LineChartProps {
 
 const LineChart = ({ data, height = 350 }: LineChartProps) => {
   const chartRef = useRef<HTMLDivElement>(null);
-  const chartInstance = useRef<echarts.ECharts>();
+  const chartInstance = useRef<echarts.ECharts | undefined>(undefined);
 
   useEffect(() => {
     if (!chartRef.current) return;

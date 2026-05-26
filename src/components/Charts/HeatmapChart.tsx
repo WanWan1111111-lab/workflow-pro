@@ -9,7 +9,7 @@ interface HeatmapChartProps {
 
 const HeatmapChart = ({ data, height = 350 }: HeatmapChartProps) => {
   const chartRef = useRef<HTMLDivElement>(null);
-  const chartInstance = useRef<echarts.ECharts>();
+  const chartInstance = useRef<echarts.ECharts | undefined>(undefined);
 
   const hours = ['0-2', '2-4', '4-6', '6-8', '8-10', '10-12', '12-14', '14-16', '16-18', '18-20', '20-22', '22-24'];
   const days = ['周一', '周二', '周三', '周四', '周五', '周六', '周日'];

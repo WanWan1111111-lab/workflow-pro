@@ -13,7 +13,7 @@ interface BarChartProps {
 
 const BarChart = ({ data, height = 350 }: BarChartProps) => {
   const chartRef = useRef<HTMLDivElement>(null);
-  const chartInstance = useRef<echarts.ECharts>();
+  const chartInstance = useRef<echarts.ECharts | undefined>(undefined);
 
   useEffect(() => {
     if (!chartRef.current) return;
