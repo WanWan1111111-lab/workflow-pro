@@ -19,7 +19,8 @@ const BarChart = ({ data, height = 350 }: BarChartProps) => {
     if (!chartRef.current) return;
 
     // 初始化图表
-    chartInstance.current = echarts.init(chartRef.current, null as any);
+    // @ts-ignore - echarts.init 类型定义问题
+    chartInstance.current = echarts.init(chartRef.current);
 
     const option: EChartsOption = {
       tooltip: {
