@@ -1,0 +1,42 @@
+// 淡入动画
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// 卡片样式混入
+.card-style() {
+  background: @component-background;
+  border-radius: @border-radius-lg;
+  box-shadow: @shadow-sm;
+  padding: @spacing-lg;
+  animation: fadeIn 0.3s ease-out;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  &:hover {
+    box-shadow: @shadow-md;
+  }
+}
+
+// 按钮 hover 效果
+.button-hover() {
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: @shadow-md;
+  }
+}
+
+// Flex 居中
+.flex-center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,17 @@
+@import '../../assets/styles/variables.less';
+@import '../../assets/styles/mixins.less';
+
+.dashboard-container {
+  .chart-card {
+    .card-style();
+    height: 100%;
+
+    .ant-card-head {
+      border-bottom: 1px solid @background-color;
+    }
+
+    .ant-card-body {
+      padding: @spacing-lg;
+    }
+  }
+}

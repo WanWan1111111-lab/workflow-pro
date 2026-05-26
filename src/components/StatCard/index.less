@@ -1,0 +1,40 @@
+@import '../../assets/styles/variables.less';
+@import '../../assets/styles/mixins.less';
+
+.stat-card {
+  .card-style();
+  height: 100%;
+
+  .ant-card-body {
+    padding: @spacing-lg;
+  }
+
+  .stat-card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .stat-info {
+      flex: 1;
+
+      .stat-title {
+        color: @text-color-secondary;
+        font-size: 14px;
+        margin-bottom: @spacing-xs;
+      }
+
+      .stat-trend {
+        font-size: 12px;
+        margin-top: @spacing-xs;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .stat-icon {
+      font-size: 48px;
+      opacity: 0.2;
+      margin-left: @spacing-md;
+    }
+  }
+}

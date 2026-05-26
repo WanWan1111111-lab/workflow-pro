@@ -1,0 +1,27 @@
+@import '../../assets/styles/variables.less';
+@import '../../assets/styles/mixins.less';
+
+.workorders-container {
+  .filter-card {
+    .card-style();
+
+    .ant-card-body {
+      padding: @spacing-lg;
+    }
+  }
+
+  .ant-table-wrapper {
+    .ant-table {
+      font-size: 14px;
+    }
+
+    .ant-table-thead > tr > th {
+      background: @background-color;
+      font-weight: 600;
+    }
+
+    .ant-table-tbody > tr:hover > td {
+      background: #f5f5f5;
+    }
+  }
+}
